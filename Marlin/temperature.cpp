@@ -1853,7 +1853,7 @@ ISR(TIMER0_COMPB_vect)
 
 //Add similar code for Filament Sensor - can be read any time since IIR filtering is used 
 #if defined(FILWIDTH_PIN) &&(FILWIDTH_PIN > -1)
-  current_raw_filwidth = raw_filwidth_value>>10;  //need to divide to get to 0-16384 range since we used 1/128 IIR filter approach 
+  uint16_t current_raw_filwidth = raw_filwidth_value>>10;  //need to divide to get to 0-16384 range since we used 1/128 IIR filter approach 
 #endif
     
     
